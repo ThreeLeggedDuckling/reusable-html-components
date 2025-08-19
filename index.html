@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./style.css">
+  <title>Reusable HTML Components</title>
+
+  <!-- <script type="module" src="./components/components.js" defer></script> -->
+	<script type="module" src="./main.js" defer></script>
+</head>
+<body>
+  <h1>Reusable HTML Components</h1>
+
+  <details class="section" open>
+    <summary>Why make my own reusable HTML components ?</summary>
+
+    <p>During my training, I had to create a portfolio website without any framework. I ended up with a lot of code repetions inside my html and wished I could have reusable elements. Thus the following exercice!</p>
+    <p>I'm not trying to reinvent the wheel, I just think it's a nice learning challenge.</p>
+  </details>
+
+  <details  class="section">
+    <summary>1. Simple Components</summary>
+
+    <p>Simple components have a fixed content. They can take attributes such as id or class and can be styled with external css.</p>
+    <div class="demo">
+      <basic-component></basic-component>
+    </div>
+    <div class="demo">
+      <basic-component class="highlight"></basic-component>
+    </div>
+
+    <p>Their attibute values can be tracked (have a look at the console).</p>
+    <div class="demo">
+      <tracked-attribute-component></tracked-attribute-component>
+    </div>
+    <p>If a value is given inside the component definition, that value overrides given values.</p>
+    <div class="demo">
+      <tracked-attribute-component class="someClass"></tracked-attribute-component>
+    </div>
+
+    <p>Components can be interacted with.</p>
+    <div class="demo">
+      <button-component id="basicBtn"></button-component>
+      <p id="clickCount">You have not clicked the button yet</p>
+    </div>
+  </details>
+  
+  <details  class="section">
+    <summary>2. Templated Components</summary>
+
+    <p>Components content can be customised by using templates and slots.</p>
+    <div class="demo">
+      <basic-tcomponent></basic-tcomponent>
+    </div>
+    <div class="demo">
+      <basic-tcomponent>
+        <span slot="slot1" class="highlight">custom</span>
+      </basic-tcomponent>
+    </div>
+
+    <p>Because of the use of shadow DOM, templated components content can't be styled with external css.</p>
+    <div class="demo">
+      <basic-tcomponent class="styled-btc"></basic-tcomponent>
+    </div>
+    <div class="demo">
+      <styled-tcomponent></styled-tcomponent>
+    </div>
+
+    <p>Slots of templated components with an inner styling can still be styled with external css.</p>
+    <div class="demo">
+      <styled-tcomponent>
+        <span slot="slot1">custom</span>
+      </styled-tcomponent>
+    </div>
+    <div class="demo">
+      <styled-tcomponent>
+        <span slot="slot1" class="highlight">custom</span>
+      </styled-tcomponent>
+    </div>
+  </details>
+</body>
+</html>

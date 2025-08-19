@@ -1,0 +1,63 @@
+body {
+  width: 95%;
+  margin: 2px auto;
+  padding: 0;
+
+  color: #f7f7f7;
+  background-color: #202020;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+div, .section {
+  margin: 7px;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+summary {
+  font-size: large;
+}
+
+.section {
+  border: 1px solid #6323d1;
+}
+
+.section:hover {
+  border-color: #6ce118;
+}
+
+.section:open {
+  border-color: #ffeb3b;
+  background-color: #2b2a21;
+}
+
+.demo {
+  margin: 5px 0;
+  color: #000;
+  background-color: #f7f7f7;
+}
+
+.highlight {
+  color: #ff4f1a;
+}
+
+button-component {
+  font-weight: bold;
+}
+
+button-component:hover {
+  color: #6323d1;
+  cursor: pointer;
+}
+
+.defaultClass, .someClass {
+  color: #6ce118;
+}
+
+.styled-btc span {
+  color: #6323d1;
+}
