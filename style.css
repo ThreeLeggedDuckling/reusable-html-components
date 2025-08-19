@@ -22,6 +22,10 @@ summary {
   font-size: large;
 }
 
+summary:hover, button-component:hover {
+  cursor: pointer;
+}
+
 .section {
   border: 1px solid #6323d1;
 }
@@ -42,7 +46,6 @@ summary {
 }
 
 .highlight {
-  color: #ff4f1a;
   color: #58b913;
 }
 
@@ -50,15 +53,6 @@ button-component {
   font-weight: bold;
 }
 
-button-component:hover {
+button-component:hover, .defaultClass, .someClass, .styled-btc span {
   color: #6323d1;
-  cursor: pointer;
-}
-
-.defaultClass, .someClass {
-  color: #6323d1;
-}
-
-.styled-btc span {
-  color: #6ce118;
 }

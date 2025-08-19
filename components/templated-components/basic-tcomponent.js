@@ -17,12 +17,6 @@ class BasicTComponent extends HTMLElement {
     shadowRoot.appendChild(template.content.cloneNode(true));
 	}
 
-	attributeChangedCallback(name, oldValue, newValue) {
-    console.log(
-      `BasicTComponent :\n${name} attribute changed from ${oldValue} to ${newValue}.`,
-    );
-  }
-
 }
 
 customElements.define('basic-tcomponent', BasicTComponent);
