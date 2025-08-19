@@ -2,10 +2,10 @@ const template = document.createElement('template');
 template.innerHTML = `
   <style>
     .defaultClass {
-      color: #6323d1;
+      color: #ff4f1a;
     }
     .highlight {
-      color: #6ce118;
+      color: #6323d1;
     }
   </style>
   <div>

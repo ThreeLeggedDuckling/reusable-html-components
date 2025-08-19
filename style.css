@@ -43,6 +43,7 @@ summary {
 
 .highlight {
   color: #ff4f1a;
+  color: #58b913;
 }
 
 button-component {
@@ -55,9 +56,9 @@ button-component:hover {
 }
 
 .defaultClass, .someClass {
-  color: #6ce118;
+  color: #6323d1;
 }
 
 .styled-btc span {
-  color: #6323d1;
+  color: #6ce118;
 }
