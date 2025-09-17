@@ -10,7 +10,7 @@ I'm not trying to reinvent the wheel, I just think it's a nice learning challeng
 
 Custom elements can be autonomous or customisation of built-in element. Autonomous elements inherit from the `HTMLElement` class and their behaviour has to be implementd from scratch. Customised elemnts inherit from a standart element (e.g. `HTMLParagraphElement`) and extends the behaviour of that element.
 
-### Lifecycle callbacks
+### 1. Lifecycle callbacks
 
 - `connectCallback()` : called each time the element is added to the document, the specification recommends implementing the element setup here rather than the constructor
 - `disconnectedCallback()` : called each time the element is removed from the document
@@ -18,11 +18,11 @@ Custom elements can be autonomous or customisation of built-in element. Autonomo
 - `adoptedCallback()` : called each time the element is moved to a new document
 - `attributeChangedCallback` : called when attributes are changed
 
-### States
+### 2. States
 
 Autonomous custom elements allow to define states and select against them using the `:state()` pseudo-class function. To make a state selectable, the element calls `HTMLElement.attachInternals()` in its constructor to attach an `ElementInternals` object providing access to a `CustomStateSet` through its `states` property.
 
-Defining a state is done through a getter and setter. The setter adds an identifier (string) to the `CustomStateSet` when the state is true and removes it when false. The identifier is passed to the `:state()` pseudo-class (e.g. `my-element:state(identifier) { border : solid red }`).
+Defining a state is done through a getter and setter. The setter adds an identifier (string) to the `CustomStateSet` when the state is true and removes it when false. The identifier is passed to the `:state()` pseudo-class (e.g. `my-element:state(identifier)`).
 
 ``` js
 class MyElement extends HTMLElement {
@@ -37,7 +37,7 @@ class MyElement extends HTMLElement {
 
   set customState(flag) {
     if (flag) this._internals.states.add('identifier');
-    else (flag) this._internals.states.delete('identifier');
+    else this._internals.states.delete('identifier');
   }
 }
 ```
