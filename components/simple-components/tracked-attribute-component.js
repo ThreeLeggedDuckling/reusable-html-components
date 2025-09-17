@@ -3,13 +3,13 @@ class TrackedAttributeComponent extends HTMLElement {
 
 	constructor() {
 		super();
-		this.innerHTML = `
-			<p>A simple component with its class attribute tracked</p>
-		`;
 	}
 	
 	connectedCallback() {
     this.className = 'tracked';
+    this.innerHTML = `
+      <p>A simple component with its class attribute tracked</p>
+    `;
 	}
 
 	attributeChangedCallback(name, oldValue, newValue) {

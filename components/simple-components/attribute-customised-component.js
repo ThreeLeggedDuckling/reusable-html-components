@@ -1,8 +1,10 @@
 class AttributeCustomisedComponent extends HTMLElement {
 	constructor() {
 		super();
+	}
+  
+  connectedCallback() {
     const t = this.title;
-
     this.innerHTML = `
       <style>
         .value {

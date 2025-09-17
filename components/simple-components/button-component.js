@@ -3,13 +3,13 @@ class ButtonComponent extends HTMLElement {
 
 	constructor() {
 		super();
+	}
+	
+	connectedCallback() {
     this.clickCount = 0;
     this.innerHTML = `
 			<p>Click me</p>
 		`;
-	}
-	
-	connectedCallback() {
     this.addEventListener('click', this.updateClickCount)
 	}
   
